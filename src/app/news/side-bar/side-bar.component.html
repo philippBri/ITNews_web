@@ -1,0 +1,35 @@
+<div class="card">
+  <h5 class="card-header">{{'Search' | translate}}</h5>
+  <div class="card-body">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="{{'Search for ...' | translate}}" [(ngModel)]="searchInput" name="searchInput">
+      <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button" (click)="onSearchByPhrase()" [disabled]="searchInput == ''"><i class="fa fa-search"></i> </button>
+                </span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Categories Widget -->
+<div class="card my-4">
+  <h5 class="card-header">{{'Categories' | translate}}</h5>
+  <div class="card-body">
+    <div class="container" *ngFor="let cate of categories; let i = index">
+        <div class="row">
+          <div class="col btn btn-light"
+              (click)="onSearchByCategory(cate)"
+              >{{cate.name}}</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Side Widget -->
+<div class="card my-4">
+  <h5 class="card-header">{{'Top 20 tags' | translate}}</h5>
+  <div class="cardBody card-body"  name="PopularTagsElement" >
+    <app-tags-cloud (onTagSelection)="onSearchByTag($event)"></app-tags-cloud>
+  </div>
+</div>
+

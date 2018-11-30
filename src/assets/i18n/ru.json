@@ -1,0 +1,86 @@
+{
+  "Title": "IT новости",
+  "Log In": "Войти",
+  "Sign Up": "Регистрация",
+  "Log Out": "Выход",
+  "Home": "Домашняя страница",
+  "User List": "Список пользователей",
+
+
+
+  "Profile": "Профиль",
+  "News List": "Список новостей",
+  "News Workflow": "Редактирование новости",
+
+  "User Information": "Данные пользователя",
+  "First Name": "Имя",
+  "Last Name": "Фамилия",
+  "Email": "Электронная почта",
+  "Residence": "Место проживания",
+  "Username": "Никнейм",
+  "Password": "Пароль",
+
+  "Remember password": "Запомнить пароль",
+  "Create new Account!": "Создать новый аккаунт!",
+
+  "News Title": "Заглавие",
+  "Short Description": "Краткое содержание",
+  "Category": "Категория",
+  "Tags": "Тэги",
+  "Creation Date": "Дата создания",
+
+
+  "Return": "Вернуться",
+  "Update News": "Обновить новость",
+  "Create news": "Создать новость",
+  "Enter news text here...": "Введите текст новости...",
+  "News update": "Редактирование новости",
+  "News creation": "Создание новости",
+
+  "Search": "Поиск",
+  "Search for ...": "Поиск по ...",
+  "Categories": "Категории",
+  "Top 20 tags": "Топ 20 тегов",
+  "All news by": "Все новости по",
+
+  "by": "",
+  "Posted on": "Опубликован ",
+  "Read more": "Читать дальше",
+  "Backwards": "Назад",
+  "Forward": "Вперед",
+
+
+  "Comments": "Комментарии",
+  "Leave you comment": "Оставьте Ваш комментарий",
+  "What you think about this news?": "Что вы думаете об этой новости?",
+  "Share": "Поделиться",
+  "Please": "Пожалуйста",
+  "to leave a comment.": "чтобы оставить комментарий",
+  "log in": "войдите",
+  "Like": "Нравится",
+  "Delete": "Удалить",
+
+
+  "Users Details": "Информация о пользователях",
+  "Role": "Роль",
+  "Lock": "Заблокировать",
+  "Unlock": "Разблокировать",
+  "Edit": "Редактировать",
+
+  "Edit mode": "Режим редактирования",
+  "Profile information": "Информация профиля",
+  "Number of articles": "Количество статей",
+  "Created/updated": "Создан/обновлен",
+  "City": "Город",
+  "Country": "Страна",
+
+
+  "Username or password is invalid!": "Неправильные никнейм или пароль!",
+  "": "",
+  "": "",
+  "": "",
+
+
+  "Save Changes": "Сохранить изменения",
+  "Cancel": "Отмена"
+}

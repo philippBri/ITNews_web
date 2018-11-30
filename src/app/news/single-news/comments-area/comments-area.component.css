@@ -1,0 +1,9 @@
+pre {
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid lightslategrey;
+}
+
+.text-primary {
+    cursor: pointer;
+}

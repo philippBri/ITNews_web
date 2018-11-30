@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <a routerLink="/news/all" class="navbar-brand" (click)="refresh()">{{'Title' | translate}}</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+
+
+            <ul class="navbar-nav mr-auto" *ngIf="userIsLogined" >
+                <li routerLinkActive="nav-item active">
+                    <a class="nav-link" routerLink="/home">{{'Home' | translate}}</a>
+                </li>
+                <li routerLinkActive="nav-item active">
+                    <a class="nav-link" routerLink="/userList">{{'User List' | translate}}</a>
+                </li>
+            </ul>
+
+
+            <ul class="navbar-nav navbar-right ml-auto">
+                <!--<mat-form-field >-->
+                    <!--<mat-select [(ngModel)]="selectedLang">-->
+                        <!--<mat-option *ngFor="let lang of languages" [value]="lang">-->
+                            <!--{{lang}}-->
+                        <!--</mat-option>-->
+                    <!--</mat-select>-->
+                <!--</mat-form-field>-->
+                <select #langSelect class="form-control form-control-sm" (change)="setLang(langSelect.value)">
+                    <option value="en" [selected]="getLang() === 'en'">English</option>
+                    <option value="ru" [selected]="getLang() === 'ru'">Русский</option>
+                </select>
+            </ul>
+
+
+
+
+            <ul class="navbar-nav" *ngIf="!userIsLogined">
+                <li routerLinkActive="nav-item  active">
+                    <a class="nav-link " routerLink="/login"><i class="fa fa-sign-in"></i> {{'Log In' | translate}}</a>
+                </li>
+                <li routerLinkActive="nav-item active">
+                    <a class="nav-link " routerLink="/signup"><i class="fa fa-user-plus"></i> {{'Sign Up' | translate}}</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav btn-group" *ngIf="userIsLogined">
+                <!--<li routerLinkActive="nav-item active">-->
+                    <!--<button class="btn btn-outline-primary mr-sm-2" (click)="onCreateNews()" >Create News</button>-->
+                <!--</li>-->
+
+                <li routerLinkActive="nav-item active">
+                    <button class="btn btn-outline-danger my-2 my-sm-0" (click)="onLogOut()" ><i class="fa fa-sign-out"></i> {{'Log Out' | translate}}</button>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+    </div>
+</nav>
+
+

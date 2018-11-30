@@ -1,0 +1,175 @@
+<div>
+    <button type="button" class="btn btn-lg btn-outline-secondary btn-block text-uppercase" (click)="onEditMode()">
+        <i class="fa fa-edit"> {{'Edit mode' | translate}}</i>
+    </button>
+</div>
+
+<hr>
+<mat-card>
+
+    <div class="row">
+        <div class="col-sm-9 text-center">
+            <mat-card-title>{{'Profile information' | translate}}</mat-card-title>
+        </div>
+        <div class="col-sm-3 text-center">
+            <img mat-card-sm-image src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png">
+        </div>
+    </div>
+
+
+    <div class="row" *ngIf="anyUser">
+        <div class="col-sml-6">
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput disabled="" [value]="user.username">
+                        <mat-hint align="end">{{'Username' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput disabled="" [value]="user.firstname">
+                        <mat-hint align="end">{{'First Name' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput disabled="" [value]="user.lastname">
+                        <mat-hint align="end">{{'Last Name' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+            </mat-list>
+        </div>
+        <div class="col-sml-6">
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput disabled="" [value]="user.city">
+                        <mat-hint align="end">{{'City' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput disabled="" [value]="user.country">
+                        <mat-hint align="end">{{'Country' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput disabled="" [value]="user.role">
+                        <mat-hint align="end">{{'Role' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput disabled="" [value]="news.data.length">
+                        <mat-hint align="end">{{'Number of articles' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+
+
+    <div class="row" *ngIf="!anyUser">
+        <div class="col-sml-6">
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput [value]="user.username" [(ngModel)]="user.username">
+                        <mat-hint align="end">{{'Username' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput [value]="user.firstname" [(ngModel)]="user.firstname">
+                        <mat-hint align="end">{{'First Name' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput [value]="user.lastname" [(ngModel)]="user.lastname">
+                        <mat-hint align="end">{{'Last Name' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput [value]="user.email" [(ngModel)]="user.email">
+                        <mat-hint align="end">Email</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+            </mat-list>
+        </div>
+        <div class="col-sml-6">
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput [value]="user.city" [(ngModel)]="user.city">
+                        <mat-hint align="end">{{'City' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput [value]="user.country" [(ngModel)]="user.country">
+                        <mat-hint align="end">{{'Country' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput [value]="user.role" [(ngModel)]="user.role">
+                        <mat-hint align="end">{{'Role' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-form-field appearance="legacy">
+                        <input matInput [value]="news.data.length">
+                        <mat-hint align="end">{{'Number of articles' | translate}}</mat-hint>
+                    </mat-form-field>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+
+
+</mat-card>
+
+<hr>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="news">
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> {{'Title' | translate}}</th>
+            <td mat-cell *matCellDef="let element"><a routerLink="/news/{{element.id}}">{{element.title}}</a></td>
+        </ng-container>
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef> {{'Short Description' | translate}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.description}}</td>
+        </ng-container>
+        <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> {{'Category' | translate}}</th>
+            <td mat-cell *matCellDef="let element">
+                      <mat-chip color="green">{{element.category.name}}</mat-chip>
+                </td>
+        </ng-container>
+        <ng-container matColumnDef="tags">
+            <th mat-header-cell *matHeaderCellDef> {{'Tags' | translate}}</th>
+            <td mat-cell *matCellDef="let element">
+                <mat-chip-list *ngFor="let tag of element.tags">
+                    <mat-chip>{{tag.name}}</mat-chip>
+                </mat-chip-list>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="creationDate">
+            <th mat-header-cell *matHeaderCellDef> {{'Created/updated' | translate}}</th>
+            <td mat-cell *matCellDef="let element"> {{element.creationDate}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['title', 'description', 'category', 'tags', 'creationDate']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['title', 'description', 'category', 'tags', 'creationDate'];"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+
+</div>
+<hr>

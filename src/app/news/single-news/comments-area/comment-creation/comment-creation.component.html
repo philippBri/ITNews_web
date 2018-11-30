@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+      <div class="widget-area no-padding blank">
+        <div class="status-upload">
+          <form>
+            <h4 class="text-center">{{'Leave you comment' | translate }}</h4>
+            <textarea placeholder="{{'What you think about this news?' | translate }}" [(ngModel)]="comment.text" name="text" #text></textarea>
+            <ul>
+              <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+            </ul>
+            <button type="button" class="btn btn-primary" (click)="onAddComment()"><i class="fa fa-share"></i> {{'Share' | translate }}</button>
+          </form>
+        </div><!-- Status Upload  -->
+      </div><!-- Widget Area -->
+
+  </div>
+</div>

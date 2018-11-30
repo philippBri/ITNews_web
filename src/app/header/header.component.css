@@ -1,0 +1,11 @@
+.active {
+    background:antiquewhite;
+}
+
+.navbar-right {
+    margin-right: 10px
+}
+
+.mat-form-field {
+    width: 40px;
+}

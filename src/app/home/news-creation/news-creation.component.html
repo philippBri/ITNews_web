@@ -1,0 +1,72 @@
+<div class="card">
+    <button class="btn btn-secondary" (click)="onCancel()">{{'Return' | translate}}</button>
+    <div class="card-header text-center">
+        <h1>{{editMode? 'News update' : 'News creation' | translate}}</h1>
+    </div>
+
+    <div class="card-body">
+        <form class="form" role="form" autocomplete="off">
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">{{'News Title' | translate}}</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="text" [(ngModel)]="news.title" name="title">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">{{'Short Description' | translate}}</label>
+                <div class="col-lg-9">
+                    <input class="form-control" type="text" [(ngModel)]="news.description" name="description">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">{{'Category' | translate}}</label>
+                <div class="col-lg-9">
+                    <mat-form-field>
+                        <mat-select [(ngModel)]="news.category.id" name="section" >
+                            <mat-option *ngFor="let cat of categories" [value]="cat.id" >
+                                {{cat.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-3 col-form-label form-control-label">{{'Tags' | translate}}</label>
+                <div class="col-lg-9">
+                    <!--<app-chips-input (elementsChange)="onElementsChange($event)"></app-chips-input>-->
+                    <!--<app-chips-input [(tags)]="news.tags"></app-chips-input>-->
+                    <app-chips-input></app-chips-input>
+                </div>
+            </div>
+            <div class="form-group row">
+
+                <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true"
+                                [(ngModel)]="news.text"
+                                [ngModelOptions]="{standalone: true}"
+                                 minHeight="300px"
+                                style="max-width: 100%"
+                ></app-ngx-editor>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-lg btn-outline-secondary btn-block text-uppercase"
+                (click)="onCreateNews()">{{editMode ? 'Update News' : 'Create news' | translate}}
+        </button>
+    </div>
+</div>
+
+
+<!--&lt;!&ndash;<div class="form-group row">&ndash;&gt;-->
+<!--<div class="mr-auto">-->
+<!--&lt;!&ndash;<button type="reset" class="btn btn-outline-primary" (click)="onCancel()">Cancel</button>&ndash;&gt;-->
+<!--<button type="button" class="btn btn-lg btn-primary btn-block text-uppercase" (click)="onCreateNews()">Create news</button>-->
+<!--</div>-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--<button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="onSignUp()"-->
+<!--[disabled]="!signupForm.valid">Sign Up-->
+<!--</button>-->
+

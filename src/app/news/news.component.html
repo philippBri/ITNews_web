@@ -1,0 +1,40 @@
+
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row pt-sm-2">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+            <!--<h1 class="my-4">All news by:-->
+                <!--<small><b>{{searchWord}}</b></small>-->
+            <!--</h1>-->
+
+
+                <p *ngIf="searchWord">
+                    <small>{{'All news by'|translate}}: </small>{{searchWord}}
+                </p>
+
+            <!-- Blog Posts -->
+                <router-outlet></router-outlet>
+
+
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <app-side-bar (searchWordChange)="onChangeSearchWord($event)"></app-side-bar>
+            <!--<app-side-bar (searchWordChange)="onChangeSearchWord($event)"></app-side-bar>-->
+
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+

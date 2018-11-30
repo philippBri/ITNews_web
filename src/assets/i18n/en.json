@@ -1,0 +1,86 @@
+{
+  "Title": "IT News",
+  "Log In": "Log In",
+  "Sign Up": "Sign Up",
+  "Log Out": "Log Out",
+  "Home": "Home",
+  "User List": "User List",
+
+
+
+  "Profile": "Profile",
+  "News List": "News List",
+  "News Workflow": "News Workflow",
+
+  "User Information": "User Information",
+  "First Name": "First Name",
+  "Last Name": "Last Name",
+  "Email": "Email",
+  "Residence": "Residence",
+  "Username": "Username",
+  "Password": "Password",
+
+  "Remember password": "Remember password",
+  "Create new Account!": "Create new Account!",
+
+  "News Title": "News Title",
+  "Short Description": "Short Description",
+  "Category": "Category",
+  "Tags": "Tags",
+  "Creation Date": "Creation Date",
+
+
+  "Return": "Return",
+  "Update News": "Update News",
+  "Create news": "Create news",
+  "Enter news text here...": "Enter news text here...",
+  "News update": "News update",
+  "News creation": "News creation",
+
+  "Search": "Search",
+  "Search for ...": "Search for ...",
+  "Categories": "Categories",
+  "Top 20 tags": "Top 20 tags",
+  "All news by": "All news by",
+
+  "by": "by",
+  "Posted on": "Posted on ",
+  "Read more": "Read more",
+  "Backwards": "Backwards",
+  "Forward": "Forward",
+
+
+  "Comments": "Comments",
+  "Leave you comment": "Leave you comment",
+  "What you think about this news?": "What you think about this news?",
+  "Share": "Share",
+  "Please": "Please",
+  "to leave a comment.": "to leave a comment.",
+  "log in": "log in",
+  "Like": "Like",
+  "Delete": "Delete",
+
+
+  "Users Details": "Users Details",
+  "Role": "Role",
+  "Lock": "Lock",
+  "Unlock": "Unlock",
+  "Edit": "Edit",
+
+  "Edit mode": "Edit mode",
+  "Profile information": "Profile information",
+  "Number of articles": "Number of articles",
+  "Created/updated": "Created/updated",
+  "City": "City",
+  "Country": "Country",
+
+
+  "Username or password is invalid!": "Username or password is invalid!",
+  "": "",
+  "": "",
+  "": "",
+
+
+  "Save Changes": "Save Changes",
+  "Cancel": "Cancel"
+}

@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+}
+
+mat-card {
+    width: 50%;
+
+}
+
+td.mat-cell {
+    padding: 5pt;
+}
+

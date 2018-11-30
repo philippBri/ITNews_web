@@ -1,0 +1,11 @@
+.text-primary {
+    cursor: pointer;
+}
+
+:host ::ng-deep img {
+    width: 100%;
+}
+
+/*::slotted(img) {*/
+    /*width: 100%;*/
+/*}*/

@@ -1,0 +1,38 @@
+<div class="card-body">
+
+<div class="col-sm-9 col-md-7 col-lg-4 mx-auto">
+  <h2 class="text-center">{{'Log In' | translate}}</h2>
+  <form [formGroup]="loginForm">
+    <!--<div class="form-group">-->
+      <!--<label for="email">Email address:</label>-->
+      <!--<input type="email" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email">-->
+    <!--</div>-->
+
+    <div class="form-group">
+      <label for="username">{{'Username' | translate}}:</label>
+      <input placeholder="{{'Username' | translate}}" name="username" class="form-control" id="username" formControlName="username">
+      <small class="form-text text-muted" *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">
+      Please, enter username!
+    </small>
+    </div>
+
+    <div class="form-group">
+      <label for="password">{{'Password' | translate}}:</label>
+      <input type="password" placeholder="{{'Password' | translate}}" name="password" class="form-control" id="password" formControlName="password">
+      <small class="form-text text-muted" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">
+      Please, enter password!
+    </small>
+    </div>
+
+    <div class="custom-control custom-checkbox mb-3">
+      <input type="checkbox" class="custom-control-input" id="customCheck1">
+      <label class="custom-control-label" for="customCheck1">{{'Remember password' | translate}}</label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="onLogin()" [disabled]="!loginForm.valid">{{'Log In' | translate}}</button>
+  </form>
+  <a [routerLink]="['/signup']" class="btn btn-link">{{'Create new Account!' | translate}}</a>
+</div>
+
+
+</div>

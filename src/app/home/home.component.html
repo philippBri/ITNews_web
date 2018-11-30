@@ -1,0 +1,21 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/home/profile" routerLinkActive="active">{{'Profile' | translate}}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/home/newsList" routerLinkActive="active">{{'News List' | translate}}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/home/editNews" routerLinkActive="active" (click)="onEditNews()">{{'News Workflow' | translate}}</a>
+    </li>
+</ul>
+<router-outlet></router-outlet>
+<!--<div>-->
+    <!--<div>-->
+        <!--<user-details-home></user-details-home>-->
+    <!--</div>-->
+    <!--<div>-->
+        <!--<news-list-home></news-list-home>-->
+    <!--</div>-->
+<!--</div>-->
+
